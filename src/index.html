@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="css/owfont-regular.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>momentum</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="player">
+      <div class="player-controls">
+        <button class="play-prev player-icon"></button>
+        <button class="play player-icon play-current"></button>
+        <button class="play-next player-icon"></button>
+        <div class="progress-bar-wrapper">
+          <div class="progress-bar-track-name-wrapper">
+            <div class="progress-bar-track-name"></div>
+          </div>
+
+          <input class="progress-bar" type="range" min="0" max="100" step="0.01">
+        </div>
+
+        <div class="progress-time">
+          <div class="progress-current">00:00</div>
+          <div class="progress-divider">/</div>
+          <div class="progress-total">00:00</div>
+        </div>
+
+
+
+
+        <button class="mute-btn" type="button">
+
+
+        </button>
+        <input class="volume-bar" type="range" min="0" max="100">
+
+      </div>
+      <ul class="play-list"></ul>
+    </div>
+    <div class="weather">
+      <input type="text" class="city" />
+      <i class="weather-icon owf"></i>
+      <div class="weather-error"></div>
+      <div class="description-container">
+        <span class="temperature"></span>
+        <span class="weather-description"></span>
+      </div>
+      <div class="wind"></div>
+      <div class="humidity"></div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="slider-icons">
+      <button class="slide-prev slider-icon"></button>
+      <button class="slide-next slider-icon"></button>
+    </div>
+    <time class="time"></time>
+    <date class="date"></date>
+    <div class="greeting-container">
+      <span class="greeting"></span>
+      <input type="text" class="name" placeholder="" />
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="settings-window">
+      <ul>
+        <h4 class="option-header" id="choseLanguage">Choose language</h4>
+        <li class="option">
+          <div class="option-item">
+            <span id="chooseLanguageEnglish">English</span>
+            <div class="radioCheck radio-english">
+              <input id="radioLanguageEnglish" type="radio" value="None" name="radioLanguage" />
+              <label for="radioLanguageEnglish"></label>
+            </div>
+          </div>
+          <div class="option-item">
+            <span id="chooseLanguageRussian">Russian</span>
+            <div class="radioCheck radio-russian">
+              <input id="radioLanguageRussian" type="radio" value="None" name="radioLanguage" />
+              <label for="radioLanguageRussian"></label>
+            </div>
+          </div>
+
+        </li>
+        <h4 class="option-header" id="chooseImageSource">Choose image source</h4>
+        <li class="option">
+          <div class="option-item">
+            <span>GitHub</span>
+            <div class="radioCheck radio-github">
+              <input id="radioGitHub" type="radio" value="None" name="radioSource" />
+              <label for="radioGitHub"></label>
+            </div>
+          </div>
+          <div class="option-item">
+            <span>Unsplash API</span>
+            <div class="radioCheck radio-unsplash">
+              <input id="radioUnsplash" type="radio" value="None" name="radioSource" />
+              <label for="radioUnsplash"></label>
+            </div>
+          </div>
+          <div class="option-item">
+            <span>Flickr API</span>
+            <div class="radioCheck radio-flickr">
+              <input id="radioFlickr" type="radio" value="None" name="radioSource" />
+              <label for="radioFlickr"></label>
+            </div>
+          </div>
+        </li>
+        <h4 class="option-header" id="enterTags">Enter tags (only for Unsplash API and Flickr API)</h4>
+        <li class="option">
+          <input id="inputTag" type="text" name="inputText" placeholder="tag,tag,tag,tag">
+        </li>
+        <h4 class="option-header" id="chooseBlock">Choose block</h4>
+        <li class="option">
+          <span id="chooseBlockTime">Time</span>
+          <div class="check">
+            <input id="checkTime" type="checkbox" name="check">
+            <label for="checkTime"></label>
+          </div>
+        </li>
+        <li class="option">
+          <span id="chooseBlockDate">Date</span>
+          <div class="check">
+            <input id="checkDate" type="checkbox" name="check">
+            <label for="checkDate"></label>
+          </div>
+        </li>
+        <li class="option">
+          <span id="chooseBlockGreeting">Greeting</span>
+          <div class="check">
+            <input id="checkGreeting" type="checkbox" name="check">
+            <label for="checkGreeting"></label>
+          </div>
+        </li>
+        <li class="option">
+          <span id="chooseBlockQuotes">Quotes</span>
+          <div class="check">
+            <input id="checkQuotes" type="checkbox" name="check">
+            <label for="checkQuotes"></label>
+          </div>
+        </li>
+        <li class="option">
+          <span id="chooseBlockWeather">Weather</span>
+          <div class="check">
+            <input id="checkWeather" type="checkbox" name="check">
+            <label for="checkWeather"></label>
+          </div>
+        </li>
+        <li class="option">
+          <span id="chooseBlockPlayer">Player</span>
+          <div class="check">
+            <input id="checkPlayer" type="checkbox" name="check">
+            <label for="checkPlayer"></label>
+          </div>
+        </li>
+        <li class="option">
+          <span id="chooseBlockToDo">ToDo</span>
+          <div class="check">
+            <input id="checkTodos" type="checkbox" name="check">
+            <label for="checkTodos"></label>
+          </div>
+        </li>
+
+
+      </ul>
+    </div>
+    <div class="todos-window">
+      <div class="todos-output">
+      </div>
+      <input class="todos-input" type="text" name="todosText" placeholder="f">
+    </div>
+    <div class="container">
+      <div class="settings">
+        <div class="settings-overlay"></div>
+
+        <button class="settings-button"></button>
+      </div>
+      <div class="quotes">
+        <button class="change-quote" type="button"></button>
+        <div>
+          <div class="quote"></div>
+          <div class="author"></div>
+        </div>
+      </div>
+      <div class="todos">
+        <div class="todos-overlay"></div>
+
+        <button class="todos-button" type="button">fd</button>
+      </div>
+
+    </div>
+  </footer>
+</body>
+
+</html>
